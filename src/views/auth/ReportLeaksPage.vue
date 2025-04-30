@@ -1132,16 +1132,6 @@ const filteredReportData = computed(() => {
   return filtered
 })
 
-const goToDashboard = () => {
-  console.log('Navigating to Dashboard')
-  router.push('/admin-dashboard')
-}
-
-const goToContact = () => {
-  console.log('Navigating to Contact Page')
-  router.push('/technician-dashboard')
-}
-
 const showLogoutConfirmation = () => {
   logoutConfirmationVisible.value = true
 }
@@ -1181,10 +1171,6 @@ const clearSeverityFilter = () => {
 const toggleTechnicianDropdown = () => {
   showTechnicianDropdown.value = !showTechnicianDropdown.value
 }
-const clearTechnicianFilter = () => {
-  selectedTechnicianFilter.value = ''
-}
-
 // Status Filter Functions
 const toggleStatusDropdown = () => {
   showStatusDropdown.value = !showStatusDropdown.value
