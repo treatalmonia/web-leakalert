@@ -3,9 +3,10 @@ import AdministratorDashboard from '@/views/auth/AdministratorDashboard.vue'
 import ClientDashboard from '@/views/auth//ClientDashboard.vue'
 import ContactTechnician from '@/views/auth/ContactTechnician.vue'
 import ForgotPasswordView from '@/views/auth/ForgotPasswordView.vue'
-import LoginView from '@/views/auth/LoginView.vue'
+import LoginView from '@/views/auth/loginView.vue'
 import PlumberDashboard from '@/views/auth/PlumberDashboard.vue'
 import RegisterView from '@/views/auth/RegisterView.vue'
+import ReportaLeak from '@/views/auth/ReportaLeak.vue'
 import ReportLeaksPage from '@/views/auth/ReportLeaksPage.vue'
 import SettingsPage from '@/views/auth/SettingsPage.vue'
 import WaterlineTechnicianDashboard from '@/views/auth/WaterlineTechnicianDashboard.vue'
@@ -47,6 +48,11 @@ const router = createRouter({
       path: '/register',
       name: 'register',
       component: RegisterView,
+    },
+    {
+      path: '/report-leak',
+      name: 'report-leak',
+      component: ReportaLeak,
     },
     {
       path: '/report-leaks',

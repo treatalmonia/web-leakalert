@@ -3,9 +3,9 @@
     <div class="sidebar">
       <div class="logo">Client Portal</div>
       <ul class="nav-links">
-        <li class="active"><a href="#">Dashboard</a></li>
+        <li class="active"><router-link to="/">Dashboard</router-link></li>
         <li><a href="#">My Leaks</a></li>
-        <li><a href="#">Report a Leak</a></li>
+        <li><router-link to="/report-leak">Report a Leak</router-link></li>
         <li><a href="#">Account Settings</a></li>
         <li @click="showLogoutConfirmation" class="logout-link">
           <i class="mdi mdi-logout"></i> Log Out
@@ -23,7 +23,7 @@
       <div class="dashboard-widgets">
         <div class="widget">
           <div class="widget-header">Recent Leaks</div>
-          <div class="widget-content">
+          <div class="classwidget-content">
             <ul>
               <li v-for="leak in recentLeaks" :key="leak.id">
                 {{ leak.id }} - Reported {{ leak.reported }} - Status:
@@ -37,13 +37,11 @@
         <div class="widget">
           <div class="widget-header">Announcements</div>
           <div class="widget-content">
-            <p
-              v-if="announcements.length > 0"
-              v-for="announcement in announcements"
-              :key="announcement.id"
-            >
-              {{ announcement.text }}
-            </p>
+            <div v-if="announcements.length > 0">
+              <p v-for="announcement in announcements" :key="announcement.id">
+                {{ announcement.text }}
+              </p>
+            </div>
             <p v-else>No new announcements at this time.</p>
           </div>
         </div>
@@ -117,7 +115,7 @@
     </v-dialog>
 
     <div class="bubbles">
-      <span v-for="i in 50" :key="i" :style="`--i: ${i}; left: ${Math.random() * 100}vw;`"></span>
+      <span v-for="i in 100" :key="i" :style="`--i: ${i}; left: ${Math.random() * 100}vw;`"></span>
     </div>
   </div>
 </template>
@@ -226,6 +224,7 @@ const uploadImage = (event, reportId) => {
 }
 
 .nav-links li a,
+.nav-links li router-link,
 .nav-links li.logout-link {
   display: block;
   padding: 12px 15px;
@@ -239,7 +238,9 @@ const uploadImage = (event, reportId) => {
 }
 
 .nav-links li a:hover,
+.nav-links li router-link:hover,
 .nav-links li.active a,
+.nav-links li.active router-link,
 .nav-links li.logout-link:hover {
   background-color: #4a698a; /* Slightly lighter dark blue on hover */
 }
