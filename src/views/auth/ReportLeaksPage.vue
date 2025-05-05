@@ -1040,7 +1040,6 @@ const availableTechnicians = ref([
   { name: 'Gilbert Johnston', availability: 'available', type: 'waterline technician' },
   { name: 'Alan Cain', availability: 'unavailable', type: 'plumber' },
   { name: 'Lebron James', availability: 'available', type: 'plumber' },
-  { name: 'Stephen Curry', availability: 'unavailable', type: 'waterline technician' },
 ])
 const uniqueTechnicians = computed(() => {
   return availableTechnicians.value.map((tech) => tech.name)

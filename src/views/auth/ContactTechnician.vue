@@ -93,18 +93,6 @@
           </div>
 
           <div class="technician-card">
-            <img src="/src/assets/images/stephen curry.jpg" alt="Stephen Curry" />
-            <div class="card-info">
-              <h3>Stephen Curry</h3>
-              <p>pearlie.reichman@trever.net</p>
-              <button class="message-button">
-                <MailIcon />
-                Message
-              </button>
-            </div>
-          </div>
-
-          <div class="technician-card">
             <img src="/src/assets/images/Christine Brooks.jpeg" alt="Christine Brooks" />
             <div class="card-info">
               <h3>Christine Brooks</h3>
@@ -238,10 +226,6 @@
   justify-content: space-between; /* Keep space between potential left and right items */
   align-items: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.left-header {
-  /* For potential elements on the left side of the header */
 }
 
 .right-header {

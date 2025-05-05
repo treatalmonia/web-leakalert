@@ -174,7 +174,7 @@
                       'Duane Dean',
                       'Jonathan Barker',
                       'Michael Jordan',
-                      'Stephen Curry',
+
                       'Christine Brooks',
                       'Rosie Pearson',
                       'Darrell Caldwell',
@@ -211,13 +211,12 @@
                       'Duane Dean',
                       'Jonathan Barker',
                       'Michael Jordan',
-                      'Stephen Curry',
+
                       'Christine Brooks',
                       'Rosie Pearson',
                       'Darrell Caldwell',
                       'Gilbert Johnston',
                       'Michael Phelps',
-                      'Stephen Curry',
                     ][(n + 2) % 9]
                   }}
                 </td>
