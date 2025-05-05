@@ -1,5 +1,4 @@
 <script setup>
-import { requiredValidator, emailValidator } from '@/utils/validators'
 import { ref } from 'vue'
 
 const isPasswordVisible = ref(false)
